@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: mod-1-hi
+spec:
+  schedule: "* * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hi
+            # image: mod_1:local_tmp
+            image: %%__IMAGE__%%
+            imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
