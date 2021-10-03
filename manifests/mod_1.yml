@@ -14,6 +14,6 @@ spec:
           containers:
           - name: hi
             # image: mod_1:local_tmp
-            image: daianatest.azurecr.io/shinbero/hello-world/mod_1:2021-10-03_03-48-05-UTC-5fa2d30d56becad12e01e65149df8a8fdfea14f8
+            image: daianatest.azurecr.io/shinbero/hello-world/mod_1:2021-10-03_13-52-46-UTC-5fa2d30d56becad12e01e65149df8a8fdfea14f8
             imagePullPolicy: IfNotPresent
           restartPolicy: OnFailure
